@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Datos del Animal</h2>
+    <pre id="salida"></pre>
+
+    <script>
+      class Animal {
+        #id;
+        constructor(id, name, race, color, age, gender) {
+          this.#id = id;
+          this._name = name;
+          this._race = race;
+          this._color = color;
+          this._age = age;
+          this._gender = gender;
+        }
+
+        obtenerJSON() {
+          return {
+            id: this.#id,
+            name: this._name,
+            race: this._race,
+            color: this._color,
+            age: this._age,
+            gender: this._gender
+          };
+        }
+      }
+
+      const gat = new Animal(1, "Gatito", "Gato", "Gris", 3, "Macho");
+
+      document.getElementById("salida").textContent =
+        JSON.stringify(gat.obtenerJSON(), null, 2);
+    </script>
+  </body>
+</html>
