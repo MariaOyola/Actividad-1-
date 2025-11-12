@@ -1,10 +1,3 @@
-package main
-
-import (
-	"fmt"
-)
-
-
 type Calculadora struct {
 	calcular  bool
 	electrica bool
